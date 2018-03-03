@@ -1,5 +1,6 @@
 Credits:
- - JayMontana36 (Original creator and maintainer of vBox System Information Modifier (aka vBox System Info Modifier, VirtualBox VM System Information Modifier, etc)
+ - JayMontana36 (Original creator and maintainer of vBox System Information Modifier (aka vBox System Info Modifier, VirtualBox VM System Information Modifier, etc))
+ - I_Like_Yo (Tester; found and reported a bug in v2 of the program, which would cause certain VMs on certain systems to no longer start up after modifying vBox System Information; thanks!)
 
 NOTES:
  - If you did not obtain this program from https://sites.google.com/site/jaymontana36jasen please delete it and obtain it through that site (just to be on the safe side)
@@ -8,4 +9,4 @@ Running: You must have VirtualBox installed in it's default location, otherwise 
 
 What inspired the creation of this little program/script: This script was created to help scammer exposers using VirtualBox VMs to change the system information which shows up in various places of the system (mainly cough cough msinfo32 cough cough) to help waste more of the scammer's time as well as keep things going much longer, making the scammer believe that it is a real system.
 
-What this program is currently capable of: This program in it's current form at the time of writing replaces vBox system information with user-selected system information, as well as randomly generating serial numbers, system skus, bios versions/dates, etc. Each time you use the program on a VM, new system info is generated and applied to the specified VM, even if you input the same system info as before.
+What this program is currently capable of: This program in it's current form at the time of writing replaces vBox system information with user-selected system information, as well as randomly generating serial numbers, system skus, bios versions/dates, etc. Each time you use the program on a VM, new system info is generated and applied to the specified VM, even if you input the same system info as before. Supports BIOS and EFI modes.
