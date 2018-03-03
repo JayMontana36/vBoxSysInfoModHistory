@@ -5,7 +5,7 @@ IF NOT EXIST "C:\Program Files\Oracle\Virtualbox" goto vBoxNotFound
 cd "C:\Program Files\Oracle\Virtualbox"
 IF NOT EXIST "VBoxManage.exe" goto vBoxNotFound
 cls
-echo VirtualBox VM System Information Changer by JayMontana36 v1.0
+echo VirtualBox VM System Information Changer by JayMontana36 v2 Final (Formly v1.1)
 echo.
 set /p vmID="Name of the VirtualBox VM to modify: "
 set /p sysven="System Vendor (Dell, MSI, etc) to assign: "
@@ -24,26 +24,43 @@ taskkill /F /IM VirtualBox.exe
 taskkill /F /IM VBoxSVC.exe
 echo.
 echo Modifying System Information for vBox "%vmID%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemVendor" "%sysven%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemVendor" "%sysven%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "%sysprod%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemProduct" "%sysprod%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "<empty>"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemVersion" "<empty>"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemSerial" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemSerial" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemSKU" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemSKU" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemFamily" "<empty>"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemFamily" "<empty>"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiSystemUuid" "9852bf98-b83c-49db-a8de-182c42c7226b"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiSystemUuid" "9852bf98-b83c-49db-a8de-182c42c7226b"
 echo ...
 echo Modifying BIOS Information for vBox "%vmID%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBIOSVendor" "%sysven%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBIOSVendor" "%sysven%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBIOSVersion" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBIOSVersion" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBIOSReleaseDate" "6/24/2016"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBIOSReleaseDate" "6/24/2016"
 echo ...
 echo Modifying BaseBoard Information for vBox "%vmID%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardVendor" "%sysven%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardVendor" "%sysven%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "%sysprod%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardProduct" "%sysprod%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardVersion" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardVersion" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardSerial" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardSerial" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardAssetTag" "string:%random%"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardAssetTag" "string:%random%"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardLocInChass" "<empty>"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardLocInChass" "<empty>"
+VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/efi/0/Config/DmiBoardBoardType" "10"
 VBoxManage setextradata "%vmID%" "VBoxInternal/Devices/pcbios/0/Config/DmiBoardBoardType" "10"
 echo ...
 echo Complete!
@@ -51,7 +68,6 @@ echo.
 echo Successfully modified vBox System Information for vBox VM "%vmID%"!
 pause
 goto end
-exit
 
 :vBoxNotFound
 cls
