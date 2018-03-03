@@ -1,6 +1,5 @@
 Credits:
  - JayMontana36 (Original creator and maintainer of vBox System Information Modifier (aka vBox System Info Modifier, VirtualBox VM System Information Modifier, etc))
- - I_Like_Yo (Tester; found and reported a bug in v2 of the program, which would cause certain VMs on certain systems to no longer start up after modifying vBox System Information; thanks!)
 
 NOTES:
  - If you did not obtain this program from https://sites.google.com/site/jaymontana36jasen please delete it and obtain it through that site (just to be on the safe side)
