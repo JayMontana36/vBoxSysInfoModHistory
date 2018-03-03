@@ -1,0 +1,2 @@
+This repository allows you to see all of the vBoxSysInfoMod revisions per-version rather than in incremental changes, and it is also here for archival purposes.
+A few files were renamed from what they originally were (in order to make it much easier for you to see the changes that were made per-version), however it is all pretty much the same.
