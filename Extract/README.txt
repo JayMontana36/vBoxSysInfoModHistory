@@ -1,11 +1,11 @@
 Credits:
- - JayMontana36 (Original creator and maintainer of vBox System Information Modifier (aka vBox System Info Modifier, VirtualBox VM System Information Modifier, etc))
+ - JayMontana36 (Original creator and maintainer of vBoxSysInfoMod (aka vBox System Information Modifier, vBox System Info Modifier, VirtualBox VM System Information Modifier, etc))
 
 NOTES:
- - If you did not obtain this program from https://sites.google.com/site/jaymontana36jasen please delete it and obtain it through that site (just to be on the safe side)
+ - If you did not obtain this program from "https://sites.google.com/site/jaymontana36jasen" or from "https://github.com/JayMontana36/vBoxSysInfoMod" please delete it and obtain it through one of those two sites (just to be on the safe side)
 
-Running: You must have VirtualBox installed in it's default location, otherwise this program will not work; if you have it installed in another location, you may create a symlink or shortcut to your install directory from the default install directory as a workaround. This program will verify the existance of the VirtualBox directory before allowing you to continue, but will not verify whether or not the VM name you choose exists (make sure you type it AS IS, NO MISTAKES) and also will not verify whether a specific system of your choice exists (so you can set fake vandors and systems or just straight up type jibberish and it'd still work).
+Running: Self-explanitory.
 
-What inspired the creation of this little program/script: This script was created to help scammer exposers using VirtualBox VMs to change the system information which shows up in various places of the system (mainly cough cough msinfo32 cough cough) to help waste more of the scammer's time as well as keep things going much longer, making the scammer believe that it is a real system.
+What inspired the creation of this little script/program: This script was created mainly to allow scambaiters using VirtualBox VMs to modify the system information that shows up in various places of the system (in msinfo32 and Task Manager for example) to give the illusion of a real non-virtualized system in order to help waste more of a scammer's time by keeping things going for a much longer time, making the scammer believe that it is a real actual legitimate system.
 
-What this program is currently capable of: This program in it's current form at the time of writing replaces vBox system information with user-selected system information, as well as randomly generating serial numbers, system skus, bios versions/dates, etc. Each time you use the program on a VM, new system info is generated and applied to the specified VM, even if you input the same system info as before. Supports BIOS and EFI modes.
+What this program is currently capable of: This program in it's current form at the time of writing replaces vBox system information with user-selected system information, randomly generating serial numbers, system skus, bios versions/dates, automatically hides/masks Task Manager indicators, etc. Each time you use the program on a VM, new system info is generated and applied to the specified VM, even if you decide to input the same exact system information as before. Supports both the BIOS and EFI modes.
